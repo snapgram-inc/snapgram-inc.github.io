@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Voyager Travel Agency</title>
+  <style>
+    :root {
+      --primary: #0e2a47;
+      --secondary: #f7f9fc;
+      --accent: #ffd166;
+      --light: #ffffff;
+      --dark: #222;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      scroll-behavior: smooth;
+      background-color: var(--secondary);
+      color: var(--dark);
+    }
+
+    header {
+      background-color: var(--primary);
+      color: white;
+      padding: 1rem 2rem;
+      position: sticky;
+      top: 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 1000;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 1.8rem;
+    }
+
+    nav {
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: var(--accent);
+    }
+
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+    }
+
+    .menu-toggle span {
+      background: white;
+      height: 3px;
+      width: 25px;
+      margin: 4px 0;
+    }
+
+    section {
+      padding: 4rem 2rem;
+      text-align: center;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .section-title {
+      font-size: 2.2rem;
+      margin-bottom: 1rem;
+      color: var(--primary);
+    }
+
+    #hero {
+      background: url('https://source.unsplash.com/1600x600/?travel') no-repeat center center;
+      background-size: cover;
+      color: white;
+      padding: 8rem 2rem;
+      text-shadow: 1px 1px 5px rgba(0,0,0,0.5);
+    }
+
+    #hero h2 {
+      font-size: 3rem;
+      margin: 0;
+    }
+
+    #about {
+      background-color: #ffffff;
+    }
+
+    #destinations {
+      background-color: #e3f2fd;
+    }
+
+    #packages {
+      background-color: #fff3e0;
+    }
+
+    #contact {
+      background-color: #fce4ec;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    ul li {
+      margin: 0.5rem 0;
+    }
+
+    footer {
+      background-color: var(--primary);
+      color: white;
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        background: var(--primary);
+        padding: 1rem;
+        border-radius: 8px;
+      }
+
+      nav.show {
+        display: flex;
+      }
+
+      .menu-toggle {
+        display: flex;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Voyager</h1>
+    <div class="menu-toggle" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <nav id="nav-menu">
+      <a href="#about">About</a>
+      <a href="#destinations">Destinations</a>
+      <a href="#packages">Packages</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section id="hero">
+    <div class="container">
+      <h2>Your Journey Begins Here</h2>
+      <p>Discover unforgettable destinations with Voyager Travel Agency</p>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="container">
+      <h3 class="section-title">About Us</h3>
+      <p>Voyager is a modern travel agency dedicated to creating immersive and personalized travel experiences for young explorers. We specialize in adventure, cultural, and eco-friendly tours worldwide.</p>
+    </div>
+  </section>
+
+  <section id="destinations">
+    <div class="container">
+      <h3 class="section-title">Top Destinations</h3>
+      <ul>
+        <li>Bali, Indonesia</li>
+        <li>Kyoto, Japan</li>
+        <li>Barcelona, Spain</li>
+        <li>Cape Town, South Africa</li>
+        <li>Banff, Canada</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="packages">
+    <div class="container">
+      <h3 class="section-title">Travel Packages</h3>
+      <p>Choose from budget getaways, luxury experiences, group adventures, or custom solo trips. All packages include flight booking, lodging, and guided experiences.</p>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container">
+      <h3 class="section-title">Contact Us</h3>
+      <p>Email: contact@voyagertravel.com</p>
+      <p>Phone: +1 (800) 555-TRVL</p>
+      <p>Follow us on Instagram <strong>@voyager.travel</strong></p>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Voyager Travel Agency. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      const nav = document.getElementById('nav-menu');
+      nav.classList.toggle('show');
+    }
+  </script>
+
+</body>
+</html>
