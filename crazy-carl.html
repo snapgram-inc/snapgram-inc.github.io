@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Crazy Carl's Cars - BEST DEALS!!!</title>
+  <style>
+    body {
+      background-color: lime;
+      color: red;
+      font-family: 'Comic Sans MS', cursive;
+      animation: flashBg 1s infinite alternate;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    @keyframes flashBg {
+      0% { background-color: lime; }
+      100% { background-color: yellow; }
+    }
+
+    header {
+      background-color: magenta;
+      padding: 20px;
+      border-bottom: 10px dotted cyan;
+      width: 100%;
+    }
+
+    .banner {
+      font-size: 48px;
+      color: blue;
+      background: linear-gradient(to right, red, yellow);
+      padding: 10px;
+      margin: 0 auto;
+      animation: shake 0.5s infinite;
+      display: inline-block;
+    }
+
+    @keyframes shake {
+      0% { transform: translateX(0); }
+      25% { transform: translateX(-5px); }
+      50% { transform: translateX(5px); }
+      75% { transform: translateX(-5px); }
+      100% { transform: translateX(0); }
+    }
+
+    .car {
+      border: 5px dashed red;
+      padding: 20px;
+      margin: 20px;
+      background-color: hotpink;
+      width: 80%;
+      max-width: 700px;
+    }
+
+    marquee {
+      font-size: 32px;
+      color: white;
+      background-color: black;
+      display: block;
+      margin-top: 10px;
+    }
+
+    .footer {
+      background-color: orange;
+      padding: 20px;
+      font-size: 24px;
+      font-weight: bold;
+      width: 100%;
+    }
+
+    .btn {
+      background-color: chartreuse;
+      color: purple;
+      padding: 20px;
+      font-size: 24px;
+      border: 4px ridge gold;
+      cursor: grab;
+      margin-top: 10px;
+    }
+
+    main {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+    }
+
+  </style>
+</head>
+<body>
+  <header>
+    <h1 class="banner">CRAZY CARL'S CRAZY CAR EMPORIUM!!!</h1>
+    <marquee scrollamount="30">🔥🔥 EVERYTHING MUST GO!!! FREE CARS FOR FIRST 10,000 CUSTOMERS 🔥🔥</marquee>
+  </header>
+
+  <main>
+    <section class="car">
+      <h2>🚗 1994 Toyota Corolla - $9,999 (firm) 🚗</h2>
+      <p>Green-on-green interior. Smells like hot dogs. Custom neon underglow!!!</p>
+      <button class="btn">BUY NOW!!!</button>
+    </section>
+
+    <section class="car">
+      <h2>🚙 2001 Ford Explorer - NOW WITH MORE RUST! ONLY $12,499! 🚙</h2>
+      <p>Driver door sometimes opens! CD player plays Limp Bizkit ON REPEAT!</p>
+      <button class="btn">CLAIM THIS BEAST</button>
+    </section>
+
+    <section class="car">
+      <h2>🏎️ 2010 Lamborghini (TOY REPLICA) - $79.99 OBO 🏎️</h2>
+      <p>Great for kids! Or adults with a dream and a shelf!</p>
+      <button class="btn">ZOOM ZOOM</button>
+    </section>
+  </main>
+
+  <footer class="footer">
+    COME ON DOWN TO CRAZY CARL’S WHERE THE DEALS ARE SO HOT THEY MELT YOUR FACE!!!
+  </footer>
+</body>
+</html>
