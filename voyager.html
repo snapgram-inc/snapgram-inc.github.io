@@ -3,154 +3,130 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Voyager Travel Agency</title>
+  <title>Voyager Travel</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto&display=swap" rel="stylesheet">
   <style>
     :root {
-      --primary: #0e2a47;
-      --secondary: #f7f9fc;
-      --accent: #ffd166;
-      --light: #ffffff;
-      --dark: #222;
-    }
-
-    * {
-      box-sizing: border-box;
+      --black: #111;
+      --green: #347b62;
+      --orange: #d27638;
+      --peach: #e9b8b3;
+      --blue: #a3dbe5;
+      --card-radius: 18px;
     }
 
     body {
       margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-family: 'Roboto', sans-serif;
+      background-color: var(--black);
+      color: white;
       scroll-behavior: smooth;
-      background-color: var(--secondary);
-      color: var(--dark);
     }
 
     header {
-      background-color: var(--primary);
-      color: white;
-      padding: 1rem 2rem;
-      position: sticky;
-      top: 0;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      z-index: 1000;
+      background-color: var(--orange);
+      color: black;
+      padding: 3rem 1rem;
+      text-align: center;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 2.5rem;
+      clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
     }
 
-    header h1 {
-      margin: 0;
-      font-size: 1.8rem;
-    }
-
-    nav {
-      display: flex;
-      gap: 1.5rem;
-    }
-
-    nav a {
-      color: white;
-      text-decoration: none;
-      font-weight: 500;
-      transition: color 0.3s ease;
-    }
-
-    nav a:hover {
-      color: var(--accent);
-    }
-
-    .menu-toggle {
-      display: none;
-      flex-direction: column;
-      cursor: pointer;
-    }
-
-    .menu-toggle span {
-      background: white;
-      height: 3px;
-      width: 25px;
-      margin: 4px 0;
-    }
-
-    section {
+    .section {
       padding: 4rem 2rem;
       text-align: center;
     }
 
-    .container {
-      max-width: 900px;
-      margin: 0 auto;
-    }
-
-    .section-title {
-      font-size: 2.2rem;
+    .highlight {
+      font-family: 'Montserrat', sans-serif;
+      color: var(--orange);
+      font-size: 1.8rem;
       margin-bottom: 1rem;
-      color: var(--primary);
     }
 
-    #hero {
-      background: url('https://source.unsplash.com/1600x600/?travel') no-repeat center center;
-      background-size: cover;
+    .section h2 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 2rem;
+    }
+
+    .section p {
+      max-width: 600px;
+      margin: 1rem auto;
+      font-size: 1.1rem;
+    }
+
+    .bg-peach {
+      background-color: var(--peach);
+      color: var(--black);
+    }
+
+    .bg-blue {
+      background-color: var(--blue);
+      color: var(--black);
+    }
+
+    .photo-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      justify-content: center;
+      padding: 2rem 1rem;
+    }
+
+    .photo-card {
+      width: 500px;
+      border-radius: var(--card-radius);
+      overflow: hidden;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+      background-color: white;
+    }
+
+    .photo-card img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .photo-caption {
+      padding: 0.8rem 1rem;
+      font-size: 0.95rem;
+      color: var(--black);
+    }
+
+    .ribbon {
+      background-color: var(--green);
       color: white;
-      padding: 8rem 2rem;
-      text-shadow: 1px 1px 5px rgba(0,0,0,0.5);
-    }
-
-    #hero h2 {
-      font-size: 3rem;
-      margin: 0;
-    }
-
-    #about {
-      background-color: #ffffff;
-    }
-
-    #destinations {
-      background-color: #e3f2fd;
-    }
-
-    #packages {
-      background-color: #fff3e0;
-    }
-
-    #contact {
-      background-color: #fce4ec;
-    }
-
-    ul {
-      list-style: none;
-      padding: 0;
-    }
-
-    ul li {
-      margin: 0.5rem 0;
+      font-weight: bold;
+      padding: 1rem 2rem;
+      border-radius: 2rem;
+      display: inline-block;
+      margin-top: 2rem;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1rem;
+      text-transform: uppercase;
     }
 
     footer {
-      background-color: var(--primary);
-      color: white;
-      text-align: center;
+      background-color: var(--black);
+      color: var(--blue);
       padding: 2rem;
+      text-align: center;
       font-size: 0.9rem;
     }
 
     @media (max-width: 768px) {
-      nav {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 60px;
-        right: 20px;
-        background: var(--primary);
-        padding: 1rem;
-        border-radius: 8px;
+      header {
+        font-size: 2rem;
       }
 
-      nav.show {
-        display: flex;
+      .section h2 {
+        font-size: 1.5rem;
       }
 
-      .menu-toggle {
-        display: flex;
+      .photo-card {
+        width: 100%;
+        max-width: 320px;
       }
     }
   </style>
@@ -158,73 +134,61 @@
 <body>
 
   <header>
-    <h1>Voyager</h1>
-    <div class="menu-toggle" onclick="toggleMenu()">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
-    <nav id="nav-menu">
-      <a href="#about">About</a>
-      <a href="#destinations">Destinations</a>
-      <a href="#packages">Packages</a>
-      <a href="#contact">Contact</a>
-    </nav>
+    VOYAGER TRAVEL
   </header>
 
-  <section id="hero">
-    <div class="container">
-      <h2>Your Journey Begins Here</h2>
-      <p>Discover unforgettable destinations with Voyager Travel Agency</p>
-    </div>
+  <section class="section bg-peach">
+    <h2 class="highlight">Live Your Life</h2>
+    <p>Your passport to spontaneous living. Discover curated getaways for your inner explorer.</p>
+    <div class="ribbon">Book Now</div>
   </section>
 
-  <section id="about">
-    <div class="container">
-      <h3 class="section-title">About Us</h3>
-      <p>Voyager is a modern travel agency dedicated to creating immersive and personalized travel experiences for young explorers. We specialize in adventure, cultural, and eco-friendly tours worldwide.</p>
+  <div class="photo-grid">
+    <div class="photo-card">
+      <img src="assets/voyager_golden.jpeg" alt="Traveler smiling at sunrise">
+      <div class="photo-caption">Golden hour starts your next story.</div>
     </div>
+    <div class="photo-card">
+      <img src="assets/voyager_backpack.jpeg" alt="Smiling traveler at train platform">
+      <div class="photo-caption">Your next chapter boards here.</div>
+    </div>
+  </div>
+
+  <section class="section bg-blue">
+    <h2 class="highlight">Weekend Getaways</h2>
+    <p>Snap-worthy escapes for your camera roll. Travel light, live big.</p>
   </section>
 
-  <section id="destinations">
-    <div class="container">
-      <h3 class="section-title">Top Destinations</h3>
-      <ul>
-        <li>Bali, Indonesia</li>
-        <li>Kyoto, Japan</li>
-        <li>Barcelona, Spain</li>
-        <li>Cape Town, South Africa</li>
-        <li>Banff, Canada</li>
-      </ul>
+  <div class="photo-grid">
+    <div class="photo-card">
+      <img src="assets/voyager_pantheon.jpeg" alt="Looking at the Colosseum">
+      <div class="photo-caption">Historic moments waiting for your lens.</div>
     </div>
+    <div class="photo-card">
+      <img src="assets/voyager_machu.jpeg" alt="Selfie at Machu Picchu">
+      <div class="photo-caption">World wonders, one snapshot at a time.</div>
+    </div>
+  </div>
+
+  <section class="section bg-peach">
+    <h2 class="highlight">Wander. Snap. Repeat.</h2>
+    <p>Adventure is always around the corner. Make it yours with Voyager.</p>
   </section>
 
-  <section id="packages">
-    <div class="container">
-      <h3 class="section-title">Travel Packages</h3>
-      <p>Choose from budget getaways, luxury experiences, group adventures, or custom solo trips. All packages include flight booking, lodging, and guided experiences.</p>
+  <div class="photo-grid">
+    <div class="photo-card">
+      <img src="assets/voyager_lake.jpeg" alt="Tropical bay traveler">
+      <div class="photo-caption">Tides of serenity, tailored for you.</div>
     </div>
-  </section>
-
-  <section id="contact">
-    <div class="container">
-      <h3 class="section-title">Contact Us</h3>
-      <p>Email: contact@voyagertravel.com</p>
-      <p>Phone: +1 (800) 555-TRVL</p>
-      <p>Follow us on Instagram <strong>@voyager.travel</strong></p>
+    <div class="photo-card">
+      <img src="assets/voyager_train.jpeg" alt="Backpacker at train station">
+      <div class="photo-caption">Every journey begins with bold steps.</div>
     </div>
-  </section>
+  </div>
 
   <footer>
-    <p>&copy; 2025 Voyager Travel Agency. All rights reserved.</p>
+    &copy; 2025 Voyager Travel. All rights reserved.
   </footer>
-
-  <script>
-    function toggleMenu() {
-      const nav = document.getElementById('nav-menu');
-      nav.classList.toggle('show');
-    }
-  </script>
 
 </body>
 </html>
