@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>No Bounds Athletics</title>
+  <style>
+    :root {
+      --red: #d62828;
+      --black: #111;
+      --yellow: #fcbf49;
+      --orange: #f77f00;
+      --white: #fff;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      scroll-behavior: smooth;
+      background-color: var(--black);
+      color: var(--white);
+      padding-top: 160px; /* Adjust based on header height */
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: var(--black);
+      z-index: 999;
+      transition: all 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 40px 0;
+    }
+
+    header.shrink {
+      padding: 5px 0;
+    }
+
+    .logo {
+      height: 160px;
+      transition: height 0.3s ease;
+    }
+
+    header.shrink .logo {
+      height: 40px;
+    }
+
+    nav {
+      margin-top: 30px;
+    }
+
+    nav a {
+      color: var(--white);
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+
+    section {
+      padding: 60px 20px 30px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .hero {
+      background: url('assets/nobounds_hero.png') no-repeat center center/cover;
+      text-align: center;
+      padding: 140px 20px 40px;
+    }
+
+    .hero h1 {
+      font-size: 3em;
+      color: var(--red);
+      text-shadow: 2px 2px var(--black);
+    }
+
+    .hero p {
+      font-size: 1.2em;
+      color: var(--white);
+    }
+
+    .section-title {
+      color: var(--yellow);
+      font-size: 2em;
+      border-bottom: 2px solid var(--red);
+      margin-bottom: 30px;
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    .product-grid img {
+      width: 100%;
+      border: 3px solid var(--red);
+      border-radius: 10px;
+    }
+
+    footer {
+      background: var(--red);
+      text-align: center;
+      padding: 30px;
+      color: var(--white);
+    }
+
+    @media (max-width: 600px) {
+      .hero h1 {
+        font-size: 2em;
+      }
+
+      nav a {
+        margin: 0 8px;
+        font-size: 0.9em;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header id="header">
+    <img src="assets/nobounds_logo.svg" alt="No Bounds Athletics Logo" class="logo"/>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#products">Products</a>
+      <a href="#training">Training</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero" id="home">
+    <h1>No Bounds Athletics</h1>
+    <p>Push the Limits — Shop Sportswear & Book Personal Training</p>
+  </section>
+
+  <section id="products">
+    <h2 class="section-title">Sportswear Collection</h2>
+    <div class="product-grid">
+      <img src="assets/nobounds_collection.jpeg" alt="Product 1">
+      
+    </div>
+  </section>
+
+  <section id="training">
+    <h2 class="section-title">Personal Training</h2>
+    <p>Join our expert-led fitness programs online or in-person. Whether you're just starting or leveling up, we’ll help you break your limits.</p>
+    <img src="assets/nobounds_training.jpeg" alt="Personal Training" style="width:100%; border-radius: 10px; margin-top: 20px;">
+  </section>
+
+  <section id="contact">
+    <h2 class="section-title">Contact Us</h2>
+    <p>Email: support@noboundsathletics.com</p>
+    <p>Phone: (555) 123-4567</p>
+    <p>Instagram: @noboundsathletics</p>
+  </section>
+
+  <footer>
+    &copy; 2025 No Bounds Athletics. All rights reserved.
+  </footer>
+
+  <script>
+    const header = document.getElementById('header');
+    window.addEventListener('scroll', () => {
+      header.classList.toggle('shrink', window.scrollY > 100);
+    });
+  </script>
+
+</body>
+</html>

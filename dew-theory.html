@@ -1,0 +1,155 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dew Theory</title>
+  <style>
+    :root {
+      --cream: #f7f3f0;
+      --peach: #f7d4c6;
+      --blue: #b8d2d6;
+      --font-main: 'Helvetica Neue', sans-serif;
+    }
+
+    body {
+      margin: 0;
+      font-family: var(--font-main);
+      background-color: var(--cream);
+      color: #2b2b2b;
+    }
+
+    header {
+      background-color: var(--blue);
+      padding: 1.5rem 1rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    header img.logo {
+      height: 60px;
+    }
+
+    nav a {
+      margin-left: 1rem;
+      text-decoration: none;
+      color: #2b2b2b;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    section {
+      padding: 4rem 1rem;
+      text-align: center;
+    }
+
+    section:nth-of-type(odd) {
+      background-color: var(--blue);
+    }
+
+    section h2 {
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1.5rem;
+    }
+
+    .grid img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+      max-height: 360px;
+      object-fit: cover;
+    }
+
+    footer {
+      background-color: var(--peach);
+      text-align: center;
+      padding: 2rem 1rem;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      nav a {
+        margin: 0.5rem 0;
+      }
+
+      .grid {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="assets/dew_logo.svg" alt="Dew Theory Logo" class="logo" />
+    <nav>
+      <a href="#about">About</a>
+      <a href="#products">Products</a>
+      <a href="#values">Our Values</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="about">
+      <img src="assets/dew_logo.svg" alt="Dew Theory Logo" style="height: 180px; display: block; margin: 0 auto 1.5rem auto;" />
+      <h2>Welcome to Dew Theory</h2>
+      <p>Skincare that celebrates nature, purity, and balance. Our Korean-inspired formulas are crafted to bring out your skin's natural glow.</p>
+      <div class="grid">
+        <img src="assets/dew_03-038.png" alt="Happy customer with glowing skin" />
+      </div>
+    </section>
+
+    <section id="products">
+      <h2>Featured Products</h2>
+      <div class="grid">
+        <img src="assets/dew_03-027.png" alt="Cica Sleep Serum" />
+        <img src="assets/dew_03-028.png" alt="Peach Repair Serum" />
+        <img src="assets/dew_03-026.png" alt="Tea Tree Body Lotion" />
+      </div>
+    </section>
+
+    <section id="values">
+      <h2>Our Philosophy</h2>
+      <p>At Dew Theory, we value sustainability, transparency, and care. All our products are:</p>
+      <ul style="list-style: none; padding: 0; font-weight: bold; font-size: 1.1rem;">
+        <li>✔ Organic & Wildcrafted</li>
+        <li>✔ Eco-Friendly Packaging</li>
+        <li>✔ Vegan & Cruelty-Free</li>
+        <li>✔ Made in the USA</li>
+      </ul>
+      <div class="grid">
+        <img src="assets/dew_03-039.png" alt="Clean ingredients" />
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 Dew Theory. All rights reserved.
+  </footer>
+</body>
+</html>
