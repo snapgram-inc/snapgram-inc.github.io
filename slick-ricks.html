@@ -133,8 +133,24 @@
   <a href="#contact">Contact</a>
 </nav>
 
-<section id="about">
+<marquee behavior="scroll" direction="left">
+  <span style="color: yellow; font-size: 24px; font-weight: bold; animation: blinker 1s linear infinite;">
+    💥 MIRACLE GROW ELIXIR - LIMITED TIME OFFER!!! 💥
+  </span>
+</marquee>
+
+<style>
+@keyframes blinker {
+  50% { opacity: 0; }
+}
+</style>
+
+
+<section>
   <img src="assets/slick_logo.svg" alt="Slick Rick's Logo" class="logo" style="display: block; margin: 0 auto;"/>
+</section>
+
+<section id="about">
   <h2>Hair Loss?!</h2>
   <div class="img-box">
     <img src="assets/slick_b4a.jpeg" alt="Before and After Hair Growth">
@@ -176,6 +192,15 @@
 <footer>
   &copy; 2004–2025 Slick Rick’s Scalp Shack. All rights reserved. Scalp you later!
 </footer>
+
+<script>
+  window.onload = function () {
+    setTimeout(function () {
+      alert("⚠️ WARNING: Baldness Detected. Proceed to Slick Rick’s Immediately!!!!");
+    }, 2000); // Shows after 2 seconds
+  };
+</script>
+
 
 </body>
 </html>
