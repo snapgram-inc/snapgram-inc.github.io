@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Rent-a-Womb – Basically Your Own!</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to bottom, #ffe6e6, #fff);
+      margin: 0;
+      padding: 0;
+      color: #5a1a1a;
+    }
+
+    header {
+      background-color: #ffcccc;
+      text-align: center;
+      padding: 2em 1em;
+    }
+
+    header img {
+      max-width: 200px;
+    }
+
+    header h1 {
+      font-size: 2em;
+      margin: 0.5em 0 0.2em;
+    }
+
+    header p {
+      font-size: 1.2em;
+      font-style: italic;
+    }
+
+    section {
+      padding: 2em 1em;
+      text-align: center;
+    }
+
+    .intro img {
+      width: 80%;
+      max-width: 600px;
+      margin-top: 1em;
+    }
+
+    .carousel {
+      background: #fff0f0;
+      border-top: 2px solid #ffaaaa;
+      border-bottom: 2px solid #ffaaaa;
+      padding: 2em 1em;
+    }
+
+    .carousel h2 {
+      margin-bottom: 1em;
+    }
+
+    .review {
+      display: none;
+      max-width: 500px;
+      margin: 0 auto;
+      font-style: italic;
+    }
+
+    .review.active {
+      display: block;
+    }
+
+    .carousel-controls {
+      margin-top: 1em;
+    }
+
+    .carousel-controls button {
+      background: #ffaaaa;
+      color: white;
+      border: none;
+      padding: 0.5em 1em;
+      margin: 0 0.5em;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    footer {
+      background: #ffe6e6;
+      text-align: center;
+      padding: 1em;
+      font-size: 0.9em;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.5em;
+      }
+      .carousel-controls button {
+        padding: 0.4em 0.8em;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="assets/womb_logo.svg" alt="Rent-a-Womb Logo" />
+    <h1>Rent-a-Womb</h1>
+    <p><em>Basically Your Own!</em></p>
+  </header>
+
+  <section class="intro">
+    <h2>We Handle the Hard Part</h2>
+    <p>Need a womb for hire? Whether it's surrogacy, science, or just a “temporary arrangement,” we’ve got you covered with 24/7 warmth and premium womb care.</p>
+    <img src="assets/womb_baby.jpeg" alt="Womb diagram" />
+  </section>
+
+  <section class="carousel">
+    <h2>Real Reviews from Real (Probably) Customers</h2>
+    <div class="review active">
+      <p>“I can’t believe how easy it was. Nine months later and boom! Baby. Highly recommend.”<br>– Todd F.</p>
+    </div>
+    <div class="review">
+      <p>“I rented one for a friend. She still doesn’t know. Best baby shower ever.”<br>– Kristy W.</p>
+    </div>
+    <div class="review">
+      <p>“The womb came with Bluetooth speakers and mood lighting. 5 stars.”<br>– Jorge R.</p>
+    </div>
+    <div class="carousel-controls">
+      <button onclick="prevReview()">← Back</button>
+      <button onclick="nextReview()">Next →</button>
+    </div>
+  </section>
+
+  <section>
+    <h2>Why Choose Us?</h2>
+    <ul style="list-style: none; padding: 0;">
+      <li>✓ Rent by the trimester or full-term</li>
+      <li>✓ No hidden fetus fees</li>
+      <li>✓ Background-checked biological containers</li>
+      <li>✓ Legally ambiguous, but emotionally effective</li>
+    </ul>
+    <img src="assets/womb_women.jpeg" alt="Happy womb renters" style="margin-top: 1em; width: 80%; max-width: 600px;" />
+  </section>
+
+  <footer>
+    &copy; 2025 Rent-a-Womb Inc. | Not FDA-approved. Use at your own risk.
+  </footer>
+
+  <script>
+    const reviews = document.querySelectorAll(".review");
+    let currentIndex = 0;
+
+    function showReview(index) {
+      reviews.forEach((r, i) => {
+        r.classList.toggle("active", i === index);
+      });
+    }
+
+    function nextReview() {
+      currentIndex = (currentIndex + 1) % reviews.length;
+      showReview(currentIndex);
+    }
+
+    function prevReview() {
+      currentIndex = (currentIndex - 1 + reviews.length) % reviews.length;
+      showReview(currentIndex);
+    }
+  </script>
+
+  <audio autoplay loop hidden>
+    <source src="assets/womb_theme.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <script>
+    const wombMusic = new Audio('assets/womb_theme.mp3');
+    wombMusic.loop = true;
+    wombMusic.volume = 1.0;
+
+    wombMusic.play().catch(() => {
+      // Force play on user interaction if blocked
+      document.addEventListener('click', () => wombMusic.play(), { once: true });
+    });
+
+    // Optional: restart if stopped
+    wombMusic.addEventListener('pause', () => {
+      setTimeout(() => wombMusic.play(), 500);
+    });
+  </script>
+
+
+</body>
+</html>
